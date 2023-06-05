@@ -10,7 +10,6 @@ let col='#000000';
 let last='#000000';
 pixel.className='pixel';
 function fill(units){
-    last=units;
     txtsize.textContent=`${units}x${units}`;
     while(sketch.firstChild)sketch.removeChild(sketch.lastChild);
     let size=500/units;
@@ -30,9 +29,18 @@ function changecolor(e){
     col=`${e.target.value}`;
     last=col;
 }
+let primaryMouseButtonDown = false;
+
+function setPrimaryButtonState(e) {
+  let flags = e.buttons !== undefined ? e.buttons : e.which;
+  primaryMouseButtonDown = (flags & 1) === 1;
+}
+
+document.addEventListener("mousedown", setPrimaryButtonState);
+document.addEventListener("mousemove", setPrimaryButtonState);
+document.addEventListener("mouseup", setPrimaryButtonState);
 function dowork(e){
-    e.target.style.backgroundColor=col;
-    console.log(e.target.style.backgroundColor);
+    if(primaryMouseButtonDown)e.target.style.backgroundColor=col;
 }
 sizeip.addEventListener('input',get);
 color.addEventListener('input',changecolor);
@@ -46,6 +54,4 @@ erase.addEventListener('click',()=>{
 });
 colormode.addEventListener('click',()=>{
     col=last;
-})
-
-
+});
