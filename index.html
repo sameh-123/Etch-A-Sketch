@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>Etch-A-Sketch</title>
+</head>
+<body>
+    <div class="cont">
+        <div class="supcont1">
+            <input class="color" type="color" value="#000000">
+            <div class="txtcolor">Color</div>
+        </div>
+        <button class="colormode">Color mode</button>
+        <button class="eraser">Eraser</button>
+        <button class="clear">Clear</button>
+        <div class="supcont2">
+            <div class="txtsize">16x16</div>
+            <input class="gridsize" type="range" min="1" max="64" value="16">
+        </div>
+    </div>
+    <div class="sketch"></div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+body{
+    background-color: rgb(5, 5, 58);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+.cont{
+    height: 500px;
+    width: 200px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content:space-around;
+    border: none;
+    border-radius: 30px;
+    background-color: white;
+}
+button{
+    color: white;
+    font-size: 20px;
+    font-family: 'Lobster',cursive;
+    background-color: rgb(5, 5, 58);
+    border-radius: 10px;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+}
+.color{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.color::-webkit-color-swatch{
+    border-radius: 50%;
+}
+.txtcolor , .txtsize{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Lobster' ,cursive;
+    color: rgb(5, 5, 58);
+}
+.supcont1 , .supcont2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sketch{
+    padding: 0;
+    margin-top: 50px;
+    background-color: white;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+.pixel{
+    width: 31.25px;
+    height: 31.255px;
+}
